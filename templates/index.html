@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Fashion Shop{% endblock %}
+
+{% block content %}
+<div class="text-center py-12 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-lg shadow-xl mb-12">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">
+        Discover Your Style
+    </h1>
+    <p class="text-xl md:text-2xl font-light mb-8 animate-fade-in-up">
+        Explore the latest trends in clothing and fashion.
+    </p>
+    <a href="{{ url_for('products') }}" class="inline-block bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-105">
+        Shop Now
+    </a>
+</div>
+
+<div class="scrolling-container mb-12"> <div class="image-track">
+        <img src="https://th.bing.com/th/id/OIP.rUWybn9npvkHuZlf_2alagHaLw?w=198&h=315&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Fashion Image 1">
+        <img src="https://www.bing.com/th/id/OIP.SAUQEqJ46PAObc8fyesM5gHaLG?w=138&h=211&c=8&rs=1&qlt=90&o=6&cb=thwsc4&dpr=1.3&pid=3.1&rm=2" alt="Fashion Image 2">
+        <img src="https://th.bing.com/th/id/OIP.myu0CbD3RWS0lnejimWJqwHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fashion Image 3">
+        <img src="https://th.bing.com/th/id/OIP.9YFpa7qJoeJmGvrvS9pxkAHaK5?w=206&h=303&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fashion Image 4">
+        <img src="https://th.bing.com/th/id/OIP.VTGwY84-vngpyTPMjbFbcgHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Fashion Image 5">
+
+        <img src="https://th.bing.com/th/id/OIP.rUWybn9npvkHuZlf_2alagHaLw?w=198&h=315&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Fashion Image 1 Duplicate">
+        <img src="https://www.bing.com/th/id/OIP.SAUQEqJ46PAObc8fyesM5gHaLG?w=138&h=211&c=8&rs=1&qlt=90&o=6&cb=thwsc4&dpr=1.3&pid=3.1&rm=2" alt="Fashion Image 2 Duplicate">
+        <img src="https://th.bing.com/th/id/OIP.myu0CbD3RWS0lnejimWJqwHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fashion Image 3 Duplicate">
+        <img src="https://th.bing.com/th/id/OIP.9YFpa7qJoeJmGvrvS9pxkAHaK5?w=206&h=303&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Fashion Image 4 Duplicate">
+        <img src="https://th.bing.com/th/id/OIP.VTGwY84-vngpyTPMjbFbcgHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Fashion Image 5 Duplicate">
+    </div>
+</div>
+
+
+
+
+<section class="mb-12">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for product in products %}
+
+        {% endfor %}
+    </div>
+</section>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+      <img alt="feature" class="object-cover object-center h-full w-full" src="https://wallpaperaccess.com/full/1078823.jpg">
+    </div>
+    <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+      <div class="flex flex-col mb-10 lg:items-start items-center">
+        <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <div class="flex-grow">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
+          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+        </div>
+      </div>
+      <div class="flex flex-col mb-10 lg:items-start items-center">
+  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-2a1.5 1.5 0 00-3 0m-3.5-7.5h3m-3 0h-3m-3 0H8M7 2H5a2 2 0 00-2 2v10a2 2 0 002 2h2m0-7a2 2 0 100 4h10a2 2 0 100-4M5 18a2 2 0 00-2 2v2a1 1 0 001 1h16a1 1 0 001-1v-2a2 2 0 00-2-2H5z" />
+    </svg>
+  </div>
+  <div class="flex-grow">
+    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Sustainable Materials</h2>
+    <p class="leading-relaxed text-base">We prioritize eco-friendly fabrics like organic cotton, recycled polyester, and linen, minimizing our environmental footprint and offering conscious choices.</p>
+  </div>
+</div>
+
+<div class="flex flex-col mb-10 lg:items-start items-center">
+  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+    </svg>
+  </div>
+  <div class="flex-grow">
+    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Expert Craftsmanship</h2>
+    <p class="leading-relaxed text-base">Each garment is meticulously crafted by skilled artisans, ensuring superior quality, durability, and a flawless finish that stands the test of time.</p>
+  </div>
+</div>
+
+<div class="flex flex-col mb-10 lg:items-start items-center">
+  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  </div>
+  <div class="flex-grow">
+    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Timeless Design</h2>
+    <p class="leading-relaxed text-base">Our collections feature classic silhouettes and versatile pieces designed to transcend fleeting trends, offering enduring style for every wardrobe.</p>
+  </div>
+</div>
+
+<div class="flex flex-col mb-10 lg:items-start items-center">
+  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M10 20H4l1-1v-2a4 4 0 00-4-4H0" />
+    </svg>
+  </div>
+  <div class="flex-grow">
+    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Ethical Production</h2>
+    <p class="leading-relaxed text-base">We partner with factories that uphold fair labor practices, safe working conditions, and transparent supply chains, ensuring every purchase supports human dignity.</p>
+  </div>
+</div>
+
+<div class="flex flex-col mb-10 lg:items-start items-center">
+  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM12 15v5m0 0v-5m0 5h5m-5 0h-5" />
+    </svg>
+  </div>
+  <div class="flex-grow">
+    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Exclusive Limited Editions</h2>
+    <p class="leading-relaxed text-base">Discover unique pieces from our limited-edition collections, crafted with rare materials and distinct designs to ensure your style stands out.</p>
+  </div>
+</div>
+
+<div class="flex flex-col mb-10 lg:items-start items-center">
+  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 0A9.953 9.953 0 0112 12c.795 0 1.564-.17 2.256-.479m-.977 4.708l3.536 3.536M18 12h-2m-8 0H6m6 0a9.953 9.953 0 01-2.256.479m-.977-4.708L5.636 5.636M6 12H4m8 0h2" />
+    </svg>
+  </div>
+  <div class="flex-grow">
+    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Customer-Centric Experience</h2>
+    <p class="leading-relaxed text-base">From personalized styling advice to seamless returns, our dedicated team is here to ensure your shopping journey is as enjoyable and effortless as possible.</p>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Database file (for SQLite, if you ever switch back)
+site.db
+
+# Environment variables (sensitive data)
+.env

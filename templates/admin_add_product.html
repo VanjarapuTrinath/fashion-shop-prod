@@ -1,0 +1,75 @@
+<!-- fashion-shop/templates/admin_add_product.html -->
+{% extends "base.html" %}
+
+{% block title %}Add Product - Admin{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-[calc(100vh-200px)]">
+    <div class="w-full max-w-2xl bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">Add New Product</h1>
+        <form method="POST" action="{{ url_for('admin_add_product') }}" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                <div>
+                    <label for="{{ form.name.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.name.label }}</label>
+                    {{ form.name(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500") }}
+                    {% for error in form.name.errors %}
+                        <p class="text-red-500 text-xs italic">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <label for="{{ form.slug.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.slug.label }}</label>
+                    {{ form.slug(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500") }}
+                    {% for error in form.slug.errors %}
+                        <p class="text-red-500 text-xs italic">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="{{ form.description.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.description.label }}</label>
+                {{ form.description(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500 h-32", rows="4") }}
+                {% for error in form.description.errors %}
+                    <p class="text-red-500 text-xs italic">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                <div>
+                    <label for="{{ form.price.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.price.label }}</label>
+                    {{ form.price(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500") }}
+                    {% for error in form.price.errors %}
+                        <p class="text-red-500 text-xs italic">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <label for="{{ form.stock.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.stock.label }}</label>
+                    {{ form.stock(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500") }}
+                    {% for error in form.stock.errors %}
+                        <p class="text-red-500 text-xs italic">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="{{ form.category.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.category.label }}</label>
+                {{ form.category(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500") }}
+                {% for error in form.category.errors %}
+                    <p class="text-red-500 text-xs italic">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div class="mb-4">
+                <label for="{{ form.image_file.id }}" class="block text-gray-700 text-sm font-bold mb-2">{{ form.image_file.label }}</label>
+                {{ form.image_file(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-indigo-500") }}
+                {% for error in form.image_file.errors %}
+                    <p class="text-red-500 text-xs italic">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div class="mb-6 flex items-center">
+                {{ form.available(class="mr-2 leading-tight") }}
+                <label for="{{ form.available.id }}" class="text-gray-700 text-sm font-bold">{{ form.available.label }}</label>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-colors duration-200 text-lg">
+                {{ form.submit.label }}
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

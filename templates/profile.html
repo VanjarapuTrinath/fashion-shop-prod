@@ -1,0 +1,29 @@
+<!-- fashion-shop/templates/profile.html -->
+{% extends "base.html" %}
+
+{% block title %}Your Profile - Fashion Shop{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-[calc(100vh-200px)]">
+    <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8 border border-gray-200 text-center">
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-6">Your Profile</h1>
+        <div class="mb-4">
+            <p class="text-gray-700 text-lg font-semibold">Username:</p>
+            <p class="text-2xl text-indigo-600 font-bold">{{ user.username }}</p>
+        </div>
+        <div class="mb-4">
+            <p class="text-gray-700 text-lg font-semibold">Email:</p>
+            <p class="text-xl text-gray-800">{{ user.email }}</p>
+        </div>
+        <div class="mb-6">
+            <p class="text-gray-700 text-lg font-semibold">Your User ID:</p>
+            <p class="text-xl text-gray-800">{{ user.id }}</p> {# This line displays the user's ID #}
+        </div>
+        <div class="mt-8">
+            <a href="{{ url_for('order_history') }}" class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-full shadow-md transition-colors duration-200">
+                View My Orders
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
